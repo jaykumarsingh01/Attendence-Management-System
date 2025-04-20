@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Authentication</title>
+  <link rel="stylesheet" href="jay.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Login Page -->
+    <div class="login-page" id="loginPage">
+      <h2>Login</h2>
+
+      <!-- Sign In Form (no required on email/password for Sign In only) -->
+      <form id="signInForm" action="javascript:void(0);" onsubmit="signIn()">
+        <div class="input-group">
+          <label for="role">Role</label>
+          <select id="role" required>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="admin">Admin</option>
+            <option value="parent">Parent</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email">
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password">
+        </div>
+
+        <div class="button-row">
+          <button type="submit">Sign In</button>
+          <a href="javascript:void(0);" onclick="showForgotPassword()">Forgot Password?</a>
+        </div>
+      </form>
+
+      <!-- Separate Login Button (validates email/password) -->
+      <div class="button-row" style="margin-top: 10px;">
+        <button onclick="validateAndLogin()">Login</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="jay.js"></script>
+</body>
+</html>
