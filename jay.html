@@ -12,7 +12,7 @@
     <div class="login-page" id="loginPage">
       <h2>Login</h2>
 
-      <!-- Sign In Form (no required on email/password for Sign In only) -->
+      <!-- Sign In Form -->
       <form id="signInForm" action="javascript:void(0);" onsubmit="signIn()">
         <div class="input-group">
           <label for="role">Role</label>
@@ -32,16 +32,41 @@
           <input type="password" id="password">
         </div>
 
-        <div class="button-row">
-          <button type="submit">Sign In</button>
+        <!-- Buttons -->
+        <div class="button-row" style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 15px;">
+          <button type="submit" style="width: 100%;">Sign In</button>
+          <button type="button" onclick="validateAndLogin()" style="width: 100%;">Login</button>
           <a href="javascript:void(0);" onclick="showForgotPassword()">Forgot Password?</a>
         </div>
       </form>
+    </div>
 
-      <!-- Separate Login Button (validates email/password) -->
-      <div class="button-row" style="margin-top: 10px;">
-        <button onclick="validateAndLogin()">Login</button>
+    <!-- Forgot Password Section -->
+    <div class="forgot-password" id="forgotPassword" style="display: none; text-align: center;">
+      <h3>Forgot Password</h3>
+      <label for="otpEmail">Enter your registered email:</label><br />
+      <input type="email" id="otpEmail" required /><br /><br />
+      <button onclick="sendOTP()">Send OTP</button>
+
+      <div id="otpVerification" style="display: none; margin-top: 15px;">
+        <label for="enteredOTP">Enter OTP:</label><br />
+        <input type="text" id="enteredOTP" required /><br /><br />
+        <button onclick="verifyOTP()">Verify OTP</button>
       </div>
+
+      <button onclick="showLoginPage()" style="margin-top: 20px;">Back to Login</button>
+    </div>
+
+    <!-- Password Reset Section -->
+    <div class="password-reset" id="passwordReset" style="display: none; text-align: center;">
+      <h3>Reset Password</h3>
+      <label for="newPassword">New Password:</label><br />
+      <input type="password" id="newPassword" required /><br /><br />
+      <label for="confirmPassword">Confirm Password:</label><br />
+      <input type="password" id="confirmPassword" required /><br /><br />
+      <button onclick="resetPassword()">Reset Password</button>
+
+      <button onclick="showLoginPage()" style="margin-top: 20px;">Back to Login</button>
     </div>
   </div>
 
