@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    function toggleProfile() {
+      const profileDropdown = document.getElementById("profileDropdown");
+      profileDropdown.classList.toggle("hidden");
+    }
+
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll(".dashboard-section");
+      sections.forEach(section => section.classList.add("hidden"));
+      document.getElementById(sectionId).classList.remove("hidden");
+    }
+
+    window.onload = () => {
+      showSection("attendance");
+    }
+  </script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-md">
+      <div class="p-6 text-center border-b">
+        <h1 class="text-2xl font-bold text-blue-600">🎓 Dashboard</h1>
+      </div>
+      <nav class="p-4 space-y-2">
+        <button onclick="showSection('attendance')" class="block w-full text-left px-4 py-2 rounded hover:bg-blue-100">📅 Attendance Report</button>
+        <button onclick="showSection('schedule')" class="block w-full text-left px-4 py-2 rounded hover:bg-blue-100">📘 Subject Schedule</button>
+        <button onclick="showSection('assignments')" class="block w-full text-left px-4 py-2 rounded hover:bg-blue-100">📝 Assignments</button>
+        <button onclick="showSection('timetable')" class="block w-full text-left px-4 py-2 rounded hover:bg-blue-100">📆 Timetable</button>
+        <button onclick="showSection('grades')" class="block w-full text-left px-4 py-2 rounded hover:bg-blue-100">📊 Marks & Grades</button>
+        <button onclick="showSection('library')" class="block w-full text-left px-4 py-2 rounded hover:bg-blue-100">📚 Library Access</button>
+        <button onclick="showSection('fees')" class="block w-full text-left px-4 py-2 rounded hover:bg-blue-100">💳 Fee Payment Status</button>
+        <button onclick="showSection('test')" class="block w-full text-left px-4 py-2 rounded hover:bg-blue-100">🧪 Test Results</button>
+        <button onclick="showSection('career')" class="block w-full text-left px-4 py-2 rounded hover:bg-blue-100">🧭 Career Guidance</button>
+        <button onclick="showSection('feedback')" class="block w-full text-left px-4 py-2 rounded hover:bg-blue-100">💬 Feedback</button>
+        <button onclick="showSection('settings')" class="block w-full text-left px-4 py-2 rounded hover:bg-blue-100">⚙️ Settings</button>
+        <button onclick="showSection('helpdesk')" class="block w-full text-left px-4 py-2 rounded hover:bg-blue-100">🆘 Helpdesk</button>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 overflow-y-auto">
+      <!-- Top Bar -->
+      <div class="flex justify-end space-x-4 items-center mb-6">
+        <button class="text-gray-600 hover:text-blue-500 text-xl" title="Search">🔍</button>
+        <button class="text-gray-600 hover:text-blue-500 text-xl" title="Calendar">📅</button>
+        <button class="text-gray-600 hover:text-blue-500 text-xl" title="Mail">✉️</button>
+        <button class="text-gray-600 hover:text-blue-500 text-xl" title="Notifications">🔔</button>
+        <div class="relative">
+          <img src="https://i.pravatar.cc/40" alt="Profile" class="w-10 h-10 rounded-full cursor-pointer" onclick="toggleProfile()" />
+          <div id="profileDropdown" class="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg p-4 hidden">
+            <h3 class="text-lg font-bold mb-2">👤 Jay kr. Singh</h3>
+            <p class="text-sm text-gray-700"><strong>Email:</strong> jay@example.com</p>
+            <p class="text-sm text-gray-700"><strong>Role:</strong> Student</p>
+            <p class="text-sm text-gray-700"><strong>Department:</strong> CSE</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-semibold mb-6">Welcome, Jay!</h2>
+
+      <!-- Attendance Section with 50+ details -->
+      <section id="attendance" class="dashboard-section space-y-6">
+        <!-- Student Overview -->
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold mb-4">1. Student Overview</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div><strong>Name:</strong> Jay kumar Singh</div>
+            <div><strong>Roll No:</strong> 225/UCD/001</div>
+            <div><strong>Class/Section:</strong> CSE(Data science)</div>
+            <div><strong>Admission No:</strong> 2023CSE045</div>
+            <div><strong>Parent Name:</strong> Vijay Kumar Singh </div>
+            <div><strong>Contact:</strong> +91 9876543210</div>
+          </div>
+        </div>
+
+        <!-- Attendance Summary -->
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold mb-4">2. Attendance Summary</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+            <div><strong>Total Days:</strong> 180</div>
+            <div><strong>Days Present:</strong> 156</div>
+            <div><strong>Days Absent:</strong> 18</div>
+            <div><strong>Late Arrivals:</strong> 6</div>
+            <div><strong>Attendance %:</strong> 86.7%</div>
+            <div><strong>Leaves:</strong> 4</div>
+            <div><strong>Holidays:</strong> 10</div>
+          </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="bg-white p-6 rounded-xl shadow space-y-6">
+          <h3 class="text-xl font-bold mb-4">3. Visualizations & Charts</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold mb-2">Pie Chart</h4>
+              <canvas id="chartPie"></canvas>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">Bar Graph</h4>
+              <canvas id="chartBar"></canvas>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">Line Graph</h4>
+              <canvas id="chartLine"></canvas>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">Radar Chart</h4>
+              <canvas id="chartRadar"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Daily / Monthly Table -->
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold mb-4">4. Detailed Subject-wise Attendance</h3>
+          <table class="w-full text-sm text-left border">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="px-4 py-2">Subject</th>
+                <th class="px-4 py-2">Total Classes</th>
+                <th class="px-4 py-2">Attended</th>
+                <th class="px-4 py-2">%</th>
+                <th class="px-4 py-2">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="px-4 py-2">Math</td><td>45</td><td>40</td><td>88%</td><td>Good</td></tr>
+              <tr><td class="px-4 py-2">Physics</td><td>40</td><td>28</td><td>70%</td><td>Warning</td></tr>
+              <tr><td class="px-4 py-2">CS</td><td>50</td><td>48</td><td>96%</td><td>Excellent</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Export & Parent Section -->
+        <div class="bg-white p-6 rounded-xl shadow space-y-4">
+          <h3 class="text-xl font-bold mb-4">5. Tools & Alerts</h3>
+          <ul class="list-disc ml-6 text-sm text-gray-700">
+            <li>Absence Alerts & Notifications</li>
+            <li>Custom Alert Thresholds</li>
+            <li>Export to PDF/Excel</li>
+            <li>Share with Parents via Email</li>
+            <li>Parent Acknowledgments</li>
+            <li>Teacher Remarks</li>
+            <li>Download Attendance Certificate</li>
+            <li>AI Predictions & Attendance Policies</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Other Sections -->
+      <section id="schedule" class="dashboard-section hidden">
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold mb-4">1. Subject Overview</h3>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div><strong>Subject Name:</strong> Advanced Data Structures</div>
+            <div><strong>Subject Code:</strong> CSE301</div>
+            <div><strong>Subject Type:</strong> Theory</div>
+            <div><strong>Credits:</strong> 4</div>
+            <div><strong>Faculty Name:</strong> Dr. Priya Sharma</div>
+            <div><strong>Contact Info:</strong> priya@college.edu</div>
+            <div class="col-span-2"><strong>Description:</strong> This course covers advanced data structures and their applications.</div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold mb-4">2. Weekly Schedule</h3>
+          <table class="w-full text-sm text-left border">
+            <thead class="bg-gray-100">
+              <tr><th>Day</th><th>Time</th><th>Period</th><th>Room</th><th>Duration</th><th>Group</th><th>Type</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Mon</td><td>10:00-11:00</td><td>2</td><td>Room 101</td><td>1hr</td><td>Group A</td><td>Theory</td></tr>
+              <tr><td>Wed</td><td>12:00-2:00</td><td>4-5</td><td>Lab 3</td><td>2hr</td><td>Group B</td><td>Lab</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold mb-4">3. Calendar View</h3>
+          <ul class="list-disc ml-6 text-sm">
+            <li>Monthly Calendar with subject highlights</li>
+            <li>Weekly Planner</li>
+            <li>Daily Timetable with color codes</li>
+            <li>Class Color Coding</li>
+            <li>Drag-and-Drop Scheduling (Admin Only)</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold mb-4">4. Visual Representations</h3>
+          <ul class="list-disc ml-6 text-sm">
+            <li>Pie Chart of Time Allocation</li>
+            <li>Bar Chart of Study Hours</li>
+            <li>Timeline View</li>
+            <li>Scheduled vs Attended Chart</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold mb-4">5. Filters & Search</h3>
+          <ul class="list-disc ml-6 text-sm">
+            <li>Filter by Subject, Day, Teacher, Time Slot</li>
+            <li>Search by Name</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold mb-4">6. Class Activities & Reminders</h3>
+          <ul class="list-disc ml-6 text-sm">
+            <li>Assignments</li>
+            <li>Exam Dates</li>
+            <li>Project Deadlines</li>
+            <li>Test Schedules</li>
+            <li>Homework</li>
+            <li>Revision Plans</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold mb-4">7. Notifications & Alerts</h3>
+          <ul class="list-disc ml-6 text-sm">
+            <li>Upcoming Class Alerts</li>
+            <li>Reschedule Notices</li>
+            <li>Substitute Alerts</li>
+            <li>Class Cancellations</li>
+            <li>Custom Settings</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="text-xl font-bold mb-4">8. Additional Features</h3>
+          <ul class="list-disc ml-6 text-sm">
+            <li>Download/Print Options</li>
+            <li>Google Calendar Sync</li>
+            <li>Feedback & Ratings</li>
+            <li>Live Class Link</li>
+            <li>Notes, Announcements</li>
+            <li>Study Material Uploads</li>
+            <li>FAQs & Chatroom</li>
+          </ul>
+        </div>
+      </section>
+
+
+
+
+      
+      <section id="assignments" class="dashboard-section hidden">
+     
+
+        <div class="bg-white rounded-2xl shadow p-4">
+          <h2 class="text-xl font-bold mb-4">Student Details</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div><label class="font-medium">Student Name:</label> <p>Jay Kumar singh</p></div>
+            <div><label class="font-medium">Roll Number / ID:</label> <p>225/UCD/001</p></div>
+            <div><label class="font-medium">Class / Grade:</label> <p>B.tech CSE (DataScience)</p></div>
+            <div><label class="font-medium">Section:</label> <p>DS</p></div>
+            <div><label class="font-medium">Academic Year:</label> <p>2024-2025</p></div>
+            <div>
+              <label class="font-medium">Profile Photo:</label>
+              <img src="/profile.jpg" alt="Profile Photo" class="w-16 h-16 rounded-full">
+            </div>
+          </div>
+        </div>
+      
+        <!-- 2. Assignment Overview -->
+        <div class="bg-white rounded-2xl shadow p-4">
+          <h2 class="text-xl font-bold mb-4">Assignment Overview</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div><label class="font-medium">Assignment Title:</label> <p>Math Project</p></div>
+            <div><label class="font-medium">Assignment ID:</label> <p>ASG001</p></div>
+            <div><label class="font-medium">Subject Name:</label> <p>Mathematics</p></div>
+            <div><label class="font-medium">Subject Code:</label> <p>MATH101</p></div>
+            <div><label class="font-medium">Assigned Teacher:</label> <p>Mr. Smith</p></div>
+            <div><label class="font-medium">Assignment Type:</label> <p>Project</p></div>
+            <div class="col-span-full"><label class="font-medium">Description:</label> <p>Create a model of a 3D shape.</p></div>
+            <div><label class="font-medium">Word/Page Limit:</label> <p>10 Pages</p></div>
+            <div><label class="font-medium">Marking Criteria:</label> <p>Creativity, Accuracy, Presentation</p></div>
+          </div>
+        </div>
+      
+        <!-- 3. Submission Details -->
+        <div class="bg-white rounded-2xl shadow p-4">
+          <h2 class="text-xl font-bold mb-4">Submission Details</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div><label class="font-medium">Assignment Status:</label> <p>In Progress</p></div>
+            <div><label class="font-medium">Assigned Date:</label> <p>2025-04-01</p></div>
+            <div><label class="font-medium">Due Date:</label> <p>2025-04-15</p></div>
+            <div><label class="font-medium">Time Remaining:</label> <p>5 days</p></div>
+            <div><label class="font-medium">Submission Date:</label> <p>Pending</p></div>
+            <div><label class="font-medium">Submission Format:</label> <p>PDF</p></div>
+            <div><label class="font-medium">Submitted Files:</label> <p>No files uploaded</p></div>
+            <div><label class="font-medium">Edit Before Due Date:</label> <p>Yes</p></div>
+            <div><label class="font-medium">Resubmission Allowed:</label> <p>Yes</p></div>
+            <div class="col-span-full"><label class="font-medium">Version History:</label> <p>No previous versions</p></div>
+          </div>
+        </div>
+      
+        <!-- 4. Evaluation & Feedback -->
+        <div class="bg-white rounded-2xl shadow p-4">
+          <h2 class="text-xl font-bold mb-4">Evaluation & Feedback</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div><label class="font-medium">Marks Obtained:</label> <p>--</p></div>
+            <div><label class="font-medium">Total Marks:</label> <p>100</p></div>
+            <div><label class="font-medium">Grading Status:</label> <p>Not Yet Graded</p></div>
+            <div class="col-span-full"><label class="font-medium">Teacher Feedback:</label> <p>--</p></div>
+            <div><label class="font-medium">Grade:</label> <p>--</p></div>
+            <div class="col-span-full"><label class="font-medium">Rubric-Based Breakdown:</label> <p>--</p></div>
+            <div><button class="bg-blue-500 text-white px-4 py-2 rounded">Request Re-evaluation</button></div>
+            <div><button class="bg-green-500 text-white px-4 py-2 rounded">Download Feedback Report</button></div>
+          </div>
+        </div>
+      
+        <!-- 5. Filters & Search -->
+        <div class="bg-white rounded-2xl shadow p-4">
+          <h2 class="text-xl font-bold mb-4">Filters & Search</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" placeholder="Search by Assignment Title" class="input input-bordered w-full">
+            <select class="input input-bordered w-full"><option>Filter by Subject</option></select>
+            <select class="input input-bordered w-full"><option>Filter by Status</option></select>
+            <input type="date" class="input input-bordered w-full">
+            <select class="input input-bordered w-full"><option>Filter by Teacher</option></select>
+          </div>
+        </div>
+      
+        <!-- 6. Visualizations -->
+        <div class="bg-white rounded-2xl shadow p-4">
+          <h2 class="text-xl font-bold mb-4">Visualizations</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <canvas id="statusPieChart"></canvas>
+            <canvas id="marksBarChart"></canvas>
+            <canvas id="progressLineGraph"></canvas>
+            <div id="calendarView" class="bg-gray-100 rounded p-4">Calendar View</div>
+            <div id="assignmentTimeline" class="bg-gray-100 rounded p-4">Assignment Timeline (Gantt)</div>
+          </div>
+        </div>
+      
+        <!-- 7. Reminders & Notifications -->
+        <div class="bg-white rounded-2xl shadow p-4">
+          <h2 class="text-xl font-bold mb-4">Reminders & Notifications</h2>
+          <ul class="list-disc list-inside space-y-2">
+            <li>Upcoming Due Date Alerts</li>
+            <li>Submission Confirmation Notification</li>
+            <li>Late Submission Warning</li>
+            <li>New Assignment Notification</li>
+            <li>Feedback Received Alert</li>
+          </ul>
+        </div>
+      
+        <!-- 8. Productivity & Notes -->
+        <div class="bg-white rounded-2xl shadow p-4">
+          <h2 class="text-xl font-bold mb-4">Productivity & Notes</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <textarea placeholder="To-Do List" class="input input-bordered w-full h-32"></textarea>
+            <textarea placeholder="Notes" class="input input-bordered w-full h-32"></textarea>
+            <input type="number" placeholder="Track Daily Assignment Hours" class="input input-bordered w-full">
+            <input type="file" class="input input-bordered w-full" multiple>
+            <textarea placeholder="AI-Generated Summary" class="input input-bordered w-full h-24"></textarea>
+            <input type="text" placeholder="Collaborators / Group Members" class="input input-bordered w-full">
+            <textarea placeholder="Assignment FAQs" class="input input-bordered w-full h-24"></textarea>
+            <div class="bg-gray-100 p-4 rounded">Chat with Teacher / Group</div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </section>
+      <section id="timetable" class="dashboard-section hidden">Timetable content...</section>
+      <section id="grades" class="dashboard-section hidden">Grades content...</section>
+      <section id="library" class="dashboard-section hidden">Library content...</section>
+      <section id="fees" class="dashboard-section hidden">Fee content...</section>
+      <section id="test" class="dashboard-section hidden">Test Results content...</section>
+      <section id="career" class="dashboard-section hidden">Career Guidance content...</section>
+      <section id="feedback" class="dashboard-section hidden">Feedback content...</section>
+      <section id="settings" class="dashboard-section hidden">Settings content...</section>
+      <section id="helpdesk" class="dashboard-section hidden">Helpdesk content...</section>
+    </main>
+  </div>
+
+  <script>
+    new Chart(document.getElementById('chartPie'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Present', 'Absent', 'Late'],
+        datasets: [{ data: [80, 15, 5], backgroundColor: ['#4CAF50', '#F44336', '#FF9800'] }]
+      }
+    });
+    new Chart(document.getElementById('chartBar'), {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+        datasets: [{ label: 'Attendance %', data: [85, 82, 88, 90], backgroundColor: '#3B82F6' }]
+      }
+    });
+    new Chart(document.getElementById('chartLine'), {
+      type: 'line',
+      data: {
+        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+        datasets: [{ label: 'Weekly Attendance', data: [83, 85, 90, 87], borderColor: '#10B981', fill: false }]
+      }
+    });
+    new Chart(document.getElementById('chartRadar'), {
+      type: 'radar',
+      data: {
+        labels: ['Punctuality', 'Presence', 'Engagement', 'Responsiveness'],
+        datasets: [{ label: 'Metrics', data: [80, 90, 70, 75], backgroundColor: 'rgba(255,99,132,0.2)', borderColor: '#EF4444' }]
+      }
+    });
+  </script>
+</body>
+</html>
