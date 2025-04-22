@@ -372,110 +372,1126 @@
         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      </section>
+      <section id="timetable" class="dashboard-section hidden">
+        <div class="space-y-8">
+
+          <!-- 1. Student Information -->
+          <div class="bg-white rounded-2xl p-6 shadow-md">
+            <h2 class="text-xl font-bold mb-4">Student Information</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div>Student Name: <span class="font-medium">John Doe</span></div>
+              <div>Student ID: <span class="font-medium">ST12345</span></div>
+              <div>Class / Grade: <span class="font-medium">10</span></div>
+              <div>Section: <span class="font-medium">A</span></div>
+              <div>Academic Year: <span class="font-medium">2024-2025</span></div>
+              <div><img src="/images/profile.jpg" alt="Profile" class="h-16 w-16 rounded-full"></div>
+            </div>
+          </div>
+      
+          <!-- 2. Timetable Structure -->
+          <div class="bg-white rounded-2xl p-6 shadow-md">
+            <h2 class="text-xl font-bold mb-4">Timetable Structure</h2>
+            <table class="w-full text-left table-auto">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="p-2">Day</th>
+                  <th class="p-2">Time Slot</th>
+                  <th class="p-2">Period</th>
+                  <th class="p-2">Subject</th>
+                  <th class="p-2">Teacher</th>
+                  <th class="p-2">Room</th>
+                  <th class="p-2">Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Example row -->
+                <tr>
+                  <td class="p-2">Monday</td>
+                  <td class="p-2">09:00 - 09:45</td>
+                  <td class="p-2">1</td>
+                  <td class="p-2">Mathematics (MATH101)</td>
+                  <td class="p-2">Mr. Sharma</td>
+                  <td class="p-2">Room 101</td>
+                  <td class="p-2">Theory</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="mt-4">Total Periods/Day: 8 | Total Weekly Hours: 40</div>
+          </div>
+      
+          <!-- 3. Views & Layouts -->
+          <div class="bg-white rounded-2xl p-6 shadow-md">
+            <h2 class="text-xl font-bold mb-4">Views & Layouts</h2>
+            <div class="flex flex-wrap gap-4">
+              <button class="btn">Daily View</button>
+              <button class="btn">Weekly View</button>
+              <button class="btn">Monthly Overview</button>
+              <button class="btn">Calendar Integration</button>
+              <button class="btn">Fullscreen Mode</button>
+              <button class="btn">Mobile/Desktop View</button>
+            </div>
+          </div>
+      
+          <!-- 4. Filters & Search -->
+          <div class="bg-white rounded-2xl p-6 shadow-md">
+            <h2 class="text-xl font-bold mb-4">Filters & Search</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <input type="text" placeholder="Filter by Subject" class="input">
+              <input type="text" placeholder="Filter by Day" class="input">
+              <input type="text" placeholder="Filter by Time" class="input">
+              <input type="text" placeholder="Search by Teacher" class="input">
+              <input type="text" placeholder="Search by Room Number" class="input">
+            </div>
+          </div>
+      
+          <!-- 5. Visual Enhancements -->
+          <div class="bg-white rounded-2xl p-6 shadow-md">
+            <h2 class="text-xl font-bold mb-4">Visual Enhancements</h2>
+            <ul class="list-disc ml-6 space-y-1">
+              <li>Color-coded subjects</li>
+              <li>Current & Upcoming Period Highlights</li>
+              <li>Breaks Highlighted</li>
+              <li>Animated Period Transitions</li>
+              <li>Status Badges: Ongoing, Upcoming, Break</li>
+            </ul>
+          </div>
+      
+          <!-- 6. Notifications & Alerts -->
+          <div class="bg-white rounded-2xl p-6 shadow-md">
+            <h2 class="text-xl font-bold mb-4">Notifications & Alerts</h2>
+            <ul class="list-disc ml-6 space-y-1">
+              <li>Class Reminders</li>
+              <li>Break Notifications</li>
+              <li>Period Start Countdown</li>
+              <li>Free Period Alerts</li>
+              <li>Schedule Change Alerts</li>
+            </ul>
+          </div>
+      
+          <!-- 7. Interactivity -->
+          <div class="bg-white rounded-2xl p-6 shadow-md">
+            <h2 class="text-xl font-bold mb-4">Interactivity</h2>
+            <ul class="list-disc ml-6 space-y-1">
+              <li>Drag-and-Drop (Admin)</li>
+              <li>Click to View Subject Details</li>
+              <li>Click to Join Online Class</li>
+              <li>Notes on Periods</li>
+              <li>Assignment/Exam Link</li>
+              <li>Zoom/Meet Links</li>
+            </ul>
+          </div>
+      
+          <!-- 8. Analytics & Metrics -->
+          <div class="bg-white rounded-2xl p-6 shadow-md">
+            <h2 class="text-xl font-bold mb-4">Analytics & Metrics</h2>
+            <ul class="list-disc ml-6 space-y-1">
+              <li>Classes Per Subject/Week</li>
+              <li>Most Occupied Day</li>
+              <li>Free Periods Count</li>
+              <li>Time Spent Per Subject</li>
+              <li>Subject-wise Heatmap</li>
+            </ul>
+          </div>
+      
+          <!-- 9. Extras & Add-ons -->
+          <div class="bg-white rounded-2xl p-6 shadow-md">
+            <h2 class="text-xl font-bold mb-4">Extras & Add-ons</h2>
+            <ul class="list-disc ml-6 space-y-1">
+              <li>Export as PDF or Excel</li>
+              <li>Print Timetable</li>
+              <li>Dark Mode / Light Mode</li>
+              <li>Google Calendar Sync</li>
+              <li>Time Format: 12hr/24hr</li>
+              <li>Multilingual UI</li>
+            </ul>
+          </div>
+      
+        </div>
+
+
+      </section>
+      <section id="grades" class="dashboard-section hidden">
+
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold mb-4">Student Information</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div>Student Name: <span class="font-medium">John Doe</span></div>
+            <div>Roll Number: <span class="font-medium">123456</span></div>
+            <div>Class / Grade: <span class="font-medium">10</span></div>
+            <div>Section: <span class="font-medium">A</span></div>
+            <div>Academic Year: <span class="font-medium">2024–2025</span></div>
+            <div>Stream / Subject Group: <span class="font-medium">Science</span></div>
+            <div class="col-span-3 md:col-span-1">
+              <img src="/profile.jpg" alt="Profile Picture" class="w-24 h-24 rounded-full">
+            </div>
+          </div>
+        </div>
+      
+        <!-- 2. Subject-Wise Marks -->
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold mb-4">Subject-Wise Marks</h2>
+          <table class="w-full table-auto border">
+            <thead>
+              <tr class="bg-gray-100">
+                <th>Subject</th><th>Code</th><th>Obtained</th><th>Total</th><th>Grade</th><th>Point</th><th>%</th><th>Status</th><th>Teacher</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-center">
+                <td>Mathematics</td><td>MTH101</td><td>92</td><td>100</td><td>A+</td><td>10</td><td>92%</td><td>Pass</td><td>Mr. Smith</td>
+              </tr>
+              <!-- More rows -->
+            </tbody>
+          </table>
+        </div>
+      
+        <!-- 3. Exam Categories -->
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold mb-4">Exam Categories</h2>
+          <ul class="list-disc list-inside">
+            <li>Assessment Type: Mid-Term</li>
+            <li>Exam Date: 2025-01-15</li>
+            <li>Duration: 3 hours</li>
+            <li>Weightage: 40%</li>
+            <li>Term: Term 1</li>
+            <li>Grouping: Core</li>
+          </ul>
+        </div>
+      
+        <!-- 4. Performance Visuals -->
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold mb-4">Performance Visuals</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <canvas id="barChart"></canvas>
+            <canvas id="pieChart"></canvas>
+            <canvas id="lineGraph"></canvas>
+            <canvas id="heatmap"></canvas>
+            <canvas id="gradeTrend"></canvas>
+          </div>
+        </div>
+      
+        <!-- 5. Filters & Sorting -->
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold mb-4">Filters & Sorting</h2>
+          <div class="flex flex-wrap gap-4">
+            <input type="text" placeholder="Search Subject" class="input" />
+            <select class="select"><option>Filter by Exam Type</option></select>
+            <select class="select"><option>Filter by Term</option></select>
+            <select class="select"><option>Sort by Highest Marks</option></select>
+          </div>
+        </div>
+      
+        <!-- 6. Overall Performance Summary -->
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold mb-4">Overall Performance</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div>Total Marks: 640</div>
+            <div>Max Marks: 700</div>
+            <div>Percentage: 91.43%</div>
+            <div>CGPA: 9.1</div>
+            <div>Grade: A+</div>
+            <div>Class Rank: 2</div>
+            <div>Section Rank: 1</div>
+            <div>Subject-wise Rank: View</div>
+            <div>Summary Comments: Excellent performance!</div>
+          </div>
+        </div>
+      
+        <!-- 7. Feedback & Remarks -->
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold mb-4">Feedback & Remarks</h2>
+          <textarea placeholder="Teacher Comments..." class="textarea w-full"></textarea>
+          <textarea placeholder="Suggestions for Improvement..." class="textarea w-full mt-2"></textarea>
+          <button class="btn mt-2">Re-evaluation Request</button>
+        </div>
+      
+        <!-- 8. Notifications & Alerts -->
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold mb-4">Notifications & Alerts</h2>
+          <ul class="list-disc list-inside">
+            <li>New Marks Uploaded</li>
+            <li>Low Performance Alert</li>
+            <li>Grade Improvement Reminder</li>
+            <li>Custom Goal Tracking Alerts</li>
+          </ul>
+        </div>
+      
+        <!-- 9. Export & Sharing -->
+        <div class="mb-8">
+          <h2 class="text-xl font-semibold mb-4">Export & Sharing</h2>
+          <div class="flex gap-4">
+            <button class="btn">Download PDF</button>
+            <button class="btn">Export Excel</button>
+            <button class="btn">Print Report</button>
+            <button class="btn">Email to Parent</button>
+          </div>
+        </div>
+      
+        <!-- 10. Extra Features -->
+        <div>
+          <h2 class="text-xl font-semibold mb-4">Extra Features</h2>
+          <ul class="list-disc list-inside">
+            <li>Achievement Badges</li>
+            <li>Compare with Class Average</li>
+            <li>Progress Ring</li>
+            <li>Grade Calculator Tool</li>
+            <li>Subject Weakness Detector</li>
+            <li>AI Study Tips Generator</li>
+            <li>Study Resources & Notes Upload</li>
+          </ul>
+        </div>
+
+      </section>
+      <section id="library" class="dashboard-section hidden">Library content...
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+          <!-- 1. Student Profile Section -->
+          <div class="bg-white rounded-2xl shadow p-4">
+            <h2 class="text-xl font-semibold mb-4">Student Profile</h2>
+            <div class="grid grid-cols-2 gap-4">
+              <div><strong>Name:</strong> John Doe</div>
+              <div><strong>Student ID:</strong> 20230001</div>
+              <div><strong>Class:</strong> 10</div>
+              <div><strong>Section:</strong> A</div>
+              <div><strong>Academic Year:</strong> 2024–2025</div>
+              <div><strong>Library ID:</strong> LIB12345</div>
+              <div><strong>Membership Status:</strong> Active</div>
+              <div><img src="/images/profile.jpg" alt="Profile" class="w-16 h-16 rounded-full"></div>
+            </div>
+          </div>
+      
+          <!-- 2. Borrowed Books -->
+          <div class="bg-white rounded-2xl shadow p-4">
+            <h2 class="text-xl font-semibold mb-4">Borrowed Books</h2>
+            <div class="overflow-x-auto">
+              <table class="table-auto w-full text-left">
+                <thead>
+                  <tr>
+                    <th>Title</th><th>Book ID</th><th>Author</th><th>Borrowed</th><th>Due</th><th>Status</th><th>Renew</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>The Alchemist</td><td>ISBN1234</td><td>Paulo Coelho</td><td>01 Apr</td><td>15 Apr</td><td>Borrowed</td><td><button class="text-blue-500">Renew</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+      
+          <!-- 3. Search & Filters -->
+          <div class="bg-white rounded-2xl shadow p-4 col-span-2">
+            <h2 class="text-xl font-semibold mb-4">Search & Filters</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <input type="text" placeholder="Search Title" class="input input-bordered">
+              <input type="text" placeholder="Filter by Author" class="input input-bordered">
+              <select class="input input-bordered">
+                <option>Genre</option>
+                <option>Fiction</option>
+                <option>Science</option>
+              </select>
+              <select class="input input-bordered">
+                <option>Status</option>
+                <option>Borrowed</option>
+                <option>Returned</option>
+              </select>
+              <input type="text" placeholder="Advanced Search..." class="input input-bordered">
+            </div>
+          </div>
+      
+          <!-- 4. Reading History -->
+          <div class="bg-white rounded-2xl shadow p-4">
+            <h2 class="text-xl font-semibold mb-4">Reading History</h2>
+            <ul class="list-disc list-inside">
+              <li>Total Books Borrowed: 24</li>
+              <li>Most Borrowed Genre: Fiction</li>
+              <li>Top 5 Authors Read: ...</li>
+              <li>Monthly Reading Count: 6</li>
+              <li>Average Return Time: 10 days</li>
+              <li>Star Rating Given: 4.5</li>
+            </ul>
+          </div>
+      
+          <!-- 5. Fines & Payments -->
+          <div class="bg-white rounded-2xl shadow p-4">
+            <h2 class="text-xl font-semibold mb-4">Fines & Payments</h2>
+            <p>Current Fine: ₹50</p>
+            <p>Status: Unpaid</p>
+            <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Pay Fine Online</button>
+          </div>
+      
+          <!-- 6. Book Recommendations -->
+          <div class="bg-white rounded-2xl shadow p-4">
+            <h2 class="text-xl font-semibold mb-4">Book Recommendations</h2>
+            <ul class="list-disc list-inside">
+              <li>Suggested for You: Atomic Habits</li>
+              <li>Recently Added: AI for Kids</li>
+              <li>Trending: 1984</li>
+            </ul>
+          </div>
+      
+          <!-- 7. Library Rules & Alerts -->
+          <div class="bg-white rounded-2xl shadow p-4">
+            <h2 class="text-xl font-semibold mb-4">Library Notifications</h2>
+            <ul class="list-disc list-inside">
+              <li>Due Date Reminder: 2 books due in 2 days</li>
+              <li>New Book Alert: Python Programming</li>
+              <li>Library Closed: 1st May (Labor Day)</li>
+            </ul>
+          </div>
+      
+          <!-- 8. Miscellaneous -->
+          <div class="bg-white rounded-2xl shadow p-4 col-span-2">
+            <h2 class="text-xl font-semibold mb-4">Extras & Tools</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <button class="btn btn-outline">Reserve Book</button>
+              <button class="btn btn-outline">Download eBook</button>
+              <button class="btn btn-outline">Scan QR</button>
+              <button class="btn btn-outline">Wishlist</button>
+              <button class="btn btn-outline">Write Review</button>
+              <button class="btn btn-outline">Join Library Chatbot</button>
+            </div>
+          </div>
+      
+        </div>
+
+      </section>
+      <section id="fees" class="dashboard-section hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- 1. Student Details -->
+          <div class="card">
+            <h2 class="text-xl font-bold">Student Details</h2>
+            <ul>
+              <li>Student Name</li>
+              <li>Roll Number / ID</li>
+              <li>Class / Grade</li>
+              <li>Section</li>
+              <li>Academic Year</li>
+              <li>Profile Picture</li>
+              <li>Parent/Guardian Name</li>
+              <li>Contact Information</li>
+            </ul>
+          </div>
+      
+          <!-- 2. Fee Structure -->
+          <div class="card">
+            <h2 class="text-xl font-bold">Fee Structure</h2>
+            <ul>
+              <li>Total Fee Amount</li>
+              <li>Fee Breakdown by Category (Tuition, Transport, Lab, Library, etc.)</li>
+              <li>Monthly / Quarterly / Annual Fee Options</li>
+              <li>Installment Plan Details</li>
+              <li>Payment Mode Allowed (Cash, Card, Online, UPI, etc.)</li>
+              <li>Currency</li>
+            </ul>
+          </div>
+      
+          <!-- 3. Payment Status -->
+          <div class="card">
+            <h2 class="text-xl font-bold">Payment Status</h2>
+            <ul>
+              <li>Amount Paid</li>
+              <li>Amount Due</li>
+              <li>Amount Overdue</li>
+              <li>Next Due Date</li>
+              <li>Last Payment Date</li>
+              <li>Last Payment Amount</li>
+              <li>Payment Frequency (Monthly/Quarterly/Annually)</li>
+              <li>Payment Mode Used</li>
+              <li>Payment Receipt Number</li>
+              <li>Transaction ID</li>
+              <li>Payment Confirmation Status</li>
+            </ul>
+          </div>
+      
+          <!-- 4. Visuals & Charts -->
+          <div class="card">
+            <h2 class="text-xl font-bold">Visuals & Charts</h2>
+            <ul>
+              <li>Pie Chart: Paid vs Due vs Overdue</li>
+              <li>Bar Graph: Month-wise Payment</li>
+              <li>Line Chart: Fee Trend Over Year</li>
+              <li>Progress Ring for Completion %</li>
+              <li>Fee Heatmap (Monthly Status Indicator)</li>
+            </ul>
+          </div>
+      
+          <!-- 5. Alerts & Notifications -->
+          <div class="card">
+            <h2 class="text-xl font-bold">Alerts & Notifications</h2>
+            <ul>
+              <li>Upcoming Due Date Reminder</li>
+              <li>Overdue Payment Alert</li>
+              <li>Partial Payment Notification</li>
+              <li>Payment Receipt Download Notification</li>
+              <li>Fee Payment Confirmation Email/SMS</li>
+            </ul>
+          </div>
+      
+          <!-- 6. Filters & Search -->
+          <div class="card">
+            <h2 class="text-xl font-bold">Filters & Search</h2>
+            <ul>
+              <li>Filter by Payment Status (Paid, Unpaid, Overdue)</li>
+              <li>Filter by Month or Term</li>
+              <li>Search by Fee Type</li>
+              <li>Search by Receipt ID / Transaction ID</li>
+              <li>Filter by Payment Mode</li>
+            </ul>
+          </div>
+      
+          <!-- 7. Receipt & Document Handling -->
+          <div class="card">
+            <h2 class="text-xl font-bold">Receipt & Document Handling</h2>
+            <ul>
+              <li>Download Payment Receipt (PDF)</li>
+              <li>View Receipt History</li>
+              <li>Generate Tax Invoice</li>
+              <li>Print Payment Summary</li>
+              <li>Upload Bank Transfer Proof (if manual payment)</li>
+            </ul>
+          </div>
+      
+          <!-- 8. Fee History & Analysis -->
+          <div class="card">
+            <h2 class="text-xl font-bold">Fee History & Analysis</h2>
+            <ul>
+              <li>Total Payments Made This Year</li>
+              <li>Last 5 Transactions</li>
+              <li>Refund History</li>
+              <li>Fee Revision History</li>
+              <li>Scholarship or Discount History</li>
+              <li>Late Fee Penalty Log</li>
+            </ul>
+          </div>
+      
+          <!-- 9. Additional Features -->
+          <div class="card">
+            <h2 class="text-xl font-bold">Additional Features</h2>
+            <ul>
+              <li>Scholarship/Discount Eligibility Checker</li>
+              <li>Apply for Installment Plan</li>
+              <li>Apply for Financial Aid</li>
+              <li>Student Acknowledgment Option</li>
+              <li>Parent Approval Button</li>
+              <li>Fee FAQs Section</li>
+              <li>Contact Fee Office Button</li>
+              <li>Online Chat for Fee Support</li>
+              <li>Digital Signature on Receipts</li>
+            </ul>
+          </div>
+        </div>
+
+
+      </section>
+      <section id="test" class="dashboard-section hidden">Test Results content...
+
+        <div class="space-y-6">
+          <!-- 1. Student Information -->
+          <div class="bg-white p-4 rounded-xl shadow">
+            <h2 class="text-xl font-semibold mb-2">Student Information</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div>Student Name: <span class="font-medium">John Doe</span></div>
+              <div>Roll Number / ID: <span class="font-medium">12345</span></div>
+              <div>Class / Grade: <span class="font-medium">10</span></div>
+              <div>Section: <span class="font-medium">A</span></div>
+              <div>Academic Year: <span class="font-medium">2024-2025</span></div>
+              <div>Stream / Subject Group: <span class="font-medium">Science</span></div>
+              <div><img src="profile.jpg" alt="Profile Photo" class="w-16 h-16 rounded-full"></div>
+            </div>
+          </div>
+      
+          <!-- 2. Test Details -->
+          <div class="bg-white p-4 rounded-xl shadow">
+            <h2 class="text-xl font-semibold mb-2">Test Details</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div>Test Name: Unit Test 1</div>
+              <div>Test ID / Code: UT101</div>
+              <div>Subject Name: Mathematics</div>
+              <div>Subject Code: MATH10</div>
+              <div>Test Type: Objective</div>
+              <div>Date of Test: 2025-01-10</div>
+              <div>Duration: 1 hour</div>
+              <div>Total Marks: 50</div>
+              <div>Marks Obtained: 42</div>
+              <div>Percentage: 84%</div>
+              <div>Grade: A</div>
+              <div>Pass/Fail Status: Pass</div>
+            </div>
+          </div>
+      
+          <!-- 3. Performance Analysis -->
+          <div class="bg-white p-4 rounded-xl shadow">
+            <h2 class="text-xl font-semibold mb-2">Performance Analysis</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div>Class Average: 38</div>
+              <div>Highest Marks: 49</div>
+              <div>Lowest Marks: 25</div>
+              <div>Rank in Class: 4</div>
+              <div>Rank in Section: 6</div>
+              <div>GPA: 9.2</div>
+              <div>Time Taken: 55 mins</div>
+              <div>Accuracy Rate: 90%</div>
+              <div>Negative Marking Count: 2</div>
+              <div>Subject-Wise Performance: Good</div>
+            </div>
+          </div>
+      
+          <!-- 4. Visual Representation -->
+          <div class="bg-white p-4 rounded-xl shadow">
+            <h2 class="text-xl font-semibold mb-2">Visual Representation</h2>
+            <canvas id="barChart" class="mb-4"></canvas>
+            <canvas id="pieChart" class="mb-4"></canvas>
+            <canvas id="lineGraph" class="mb-4"></canvas>
+            <canvas id="radarChart" class="mb-4"></canvas>
+            <canvas id="heatmapChart"></canvas>
+          </div>
+      
+          <!-- 5. Filters & Sorting -->
+          <div class="bg-white p-4 rounded-xl shadow">
+            <h2 class="text-xl font-semibold mb-2">Filters & Sorting</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <input type="text" placeholder="Search by Test Name" class="input">
+              <select><option>Filter by Subject</option></select>
+              <select><option>Filter by Test Type</option></select>
+              <input type="date" placeholder="Filter by Date" class="input">
+              <select><option>Sort by Marks</option></select>
+            </div>
+          </div>
+      
+          <!-- 6. Feedback & Remarks -->
+          <div class="bg-white p-4 rounded-xl shadow">
+            <h2 class="text-xl font-semibold mb-2">Feedback & Remarks</h2>
+            <p>Teacher’s Comments: Excellent effort!</p>
+            <p>Suggestions: Improve accuracy on long problems.</p>
+            <p>Weak Areas: Algebra</p>
+            <p>Strong Areas: Geometry</p>
+            <button class="btn">Request Re-Evaluation</button>
+          </div>
+      
+          <!-- 7. Result Documentation -->
+          <div class="bg-white p-4 rounded-xl shadow">
+            <h2 class="text-xl font-semibold mb-2">Result Documentation</h2>
+            <div class="flex gap-4 flex-wrap">
+              <button class="btn">Download Marksheet (PDF)</button>
+              <button class="btn">Export as Excel</button>
+              <button class="btn">Print Result</button>
+              <button class="btn">Share with Parents</button>
+              <button class="btn">Auto-generate Summary</button>
+            </div>
+          </div>
+      
+          <!-- 8. Extra Features -->
+          <div class="bg-white p-4 rounded-xl shadow">
+            <h2 class="text-xl font-semibold mb-2">Extra Features</h2>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Test Retake Option (if allowed)</li>
+              <li>Link to Study Material</li>
+              <li>Next Test Time-Table</li>
+              <li>AI Suggestions for Weak Subjects</li>
+              <li>Certificate Generator for Top Scorers</li>
+              <li>Topper's Answer Sheet (if allowed)</li>
+              <li>Notification for New Result</li>
+              <li>Result History (Academic Year)</li>
+              <li>Subject-wise Grade Progress</li>
+              <li>Gamified Badges (e.g., “Math Pro”)</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+      <section id="career" class="dashboard-section hidden">Career Guidance content...
+        <div class="space-y-8">
+          <!-- 1. Student Profile -->
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h2 class="text-xl font-bold mb-4">1. Student Profile</h2>
+            <div class="grid grid-cols-2 gap-4">
+              <p>Student Name: <span id="career-student-name"></span></p>
+              <p>Roll Number / ID: <span id="career-student-id"></span></p>
+              <p>Class / Grade: <span id="career-grade"></span></p>
+              <p>Section: <span id="career-section"></span></p>
+              <p>Academic Year: <span id="career-year"></span></p>
+              <p>Stream / Subject Group: <span id="career-stream"></span></p>
+              <p>Preferred Languages: <span id="career-languages"></span></p>
+              <p>Contact Info: <span id="career-contact"></span></p>
+              <div class="col-span-2">
+                <img id="career-profile-picture" class="w-24 h-24 rounded-full object-cover" src="#" alt="Profile Picture">
+              </div>
+            </div>
+          </div>
+      
+          <!-- 2. Career Assessment & Preferences -->
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h2 class="text-xl font-bold mb-4">2. Career Assessment & Preferences</h2>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Career Interest Assessment Results</li>
+              <li>Personality Test Type</li>
+              <li>Top 5 Career Recommendations</li>
+              <li>Skillset Strengths</li>
+              <li>Skill Gaps Identified</li>
+              <li>Subject Preference List</li>
+              <li>Learning Style</li>
+              <li>Suggested Courses Based on Assessment</li>
+            </ul>
+          </div>
+      
+          <!-- 3. Career Information -->
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h2 class="text-xl font-bold mb-4">3. Career Information</h2>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Career Name</li>
+              <li>Description</li>
+              <li>Required Qualifications and Skills</li>
+              <li>Salary Range and Growth Outlook</li>
+              <li>Industries Hiring for Role</li>
+              <li>Work Hours and Environment</li>
+              <li>Career Roadmap</li>
+            </ul>
+          </div>
+      
+          <!-- 4. Educational Pathways -->
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h2 class="text-xl font-bold mb-4">4. Educational Pathways</h2>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Recommended Degrees</li>
+              <li>Top Colleges/Universities</li>
+              <li>Entrance Exams & Cut-offs</li>
+              <li>Course Duration, Fee, Scholarships</li>
+              <li>Admission Deadlines</li>
+            </ul>
+          </div>
+      
+          <!-- 5. Professional Resources -->
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h2 class="text-xl font-bold mb-4">5. Professional Resources</h2>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Online Courses, Certification</li>
+              <li>Internships & Job Shadowing</li>
+              <li>Mentorship, Counseling</li>
+              <li>Resume Builder & Mock Interviews</li>
+            </ul>
+          </div>
+      
+          <!-- 6. Tracking & Planning -->
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h2 class="text-xl font-bold mb-4">6. Tracking & Planning</h2>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Career Goal Tracker</li>
+              <li>Checklist of Required Actions</li>
+              <li>Test/Exam Schedule</li>
+              <li>Portfolio & Achievements</li>
+              <li>Weekly Career To-Do List</li>
+            </ul>
+          </div>
+      
+          <!-- 7. Engagement & Alerts -->
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h2 class="text-xl font-bold mb-4">7. Engagement & Alerts</h2>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>New Articles, Deadline Reminders</li>
+              <li>Career Fair Notifications</li>
+              <li>Career FAQs, Test Feedback</li>
+              <li>Bookmark/Favorite Careers</li>
+            </ul>
+          </div>
+      
+          <!-- 8. Analytics & Reports -->
+          <div class="bg-white rounded-2xl shadow p-6">
+            <h2 class="text-xl font-bold mb-4">8. Analytics & Reports</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <canvas id="careerProgressChart"></canvas>
+              <canvas id="careerMatchScorecard"></canvas>
+              <canvas id="careerComparisonChart"></canvas>
+              <div class="col-span-2">
+                <p class="text-sm text-gray-600">Performance Summary vs Desired Career Path: <span id="careerPerformanceSummary"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
 
 
 
       </section>
-      <section id="timetable" class="dashboard-section hidden">Timetable content...</section>
-      <section id="grades" class="dashboard-section hidden">Grades content...</section>
-      <section id="library" class="dashboard-section hidden">Library content...</section>
-      <section id="fees" class="dashboard-section hidden">Fee content...</section>
-      <section id="test" class="dashboard-section hidden">Test Results content...</section>
-      <section id="career" class="dashboard-section hidden">Career Guidance content...</section>
-      <section id="feedback" class="dashboard-section hidden">Feedback content...</section>
-      <section id="settings" class="dashboard-section hidden">Settings content...</section>
-      <section id="helpdesk" class="dashboard-section hidden">Helpdesk content...</section>
+
+      <script>
+        const ctx1 = document.getElementById('careerProgressChart').getContext('2d');
+        new Chart(ctx1, {
+          type: 'line',
+          data: {
+            labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+            datasets: [{
+              label: 'Progress (%)',
+              data: [25, 40, 65, 85],
+              borderColor: 'rgba(59, 130, 246, 1)',
+              fill: false
+            }]
+          }
+        });
+      
+        const ctx2 = document.getElementById('careerMatchScorecard').getContext('2d');
+        new Chart(ctx2, {
+          type: 'bar',
+          data: {
+            labels: ['Engineer', 'Doctor', 'Designer', 'Scientist', 'Lawyer'],
+            datasets: [{
+              label: 'Match %',
+              data: [90, 40, 75, 65, 50],
+              backgroundColor: 'rgba(16, 185, 129, 0.7)'
+            }]
+          }
+        });
+      
+        const ctx3 = document.getElementById('careerComparisonChart').getContext('2d');
+        new Chart(ctx3, {
+          type: 'radar',
+          data: {
+            labels: ['Skill Fit', 'Interest Fit', 'Growth Rate', 'Salary', 'Work-Life Balance'],
+            datasets: [{
+              label: 'Software Engineer',
+              data: [85, 95, 80, 75, 70],
+              backgroundColor: 'rgba(96, 165, 250, 0.2)',
+              borderColor: 'rgba(96, 165, 250, 1)',
+              pointBackgroundColor: 'rgba(96, 165, 250, 1)'
+            }, {
+              label: 'Doctor',
+              data: [70, 55, 85, 80, 60],
+              backgroundColor: 'rgba(239, 68, 68, 0.2)',
+              borderColor: 'rgba(239, 68, 68, 1)',
+              pointBackgroundColor: 'rgba(239, 68, 68, 1)'
+            }]
+          }
+        });
+      </script>
+
+
+
+      <section id="feedback" class="dashboard-section hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Student Information -->
+          <div class="bg-white rounded-2xl p-4 shadow">
+            <h3 class="font-semibold text-xl mb-2">1. Student Information</h3>
+            <input placeholder="Student Name" class="input" />
+            <input placeholder="Roll Number / ID" class="input" />
+            <input placeholder="Class / Grade" class="input" />
+            <input placeholder="Section" class="input" />
+            <input placeholder="Stream / Subject Group" class="input" />
+            <input placeholder="Academic Year" class="input" />
+            <input placeholder="Contact Info (optional)" class="input" />
+            <label><input type="checkbox" /> Submit Feedback Anonymously</label>
+          </div>
+      
+          <!-- Feedback Categories -->
+          <div class="bg-white rounded-2xl p-4 shadow">
+            <h3 class="font-semibold text-xl mb-2">2. Feedback Categories</h3>
+            <select class="input">
+              <option>Course Content Feedback</option>
+              <option>Teaching Quality</option>
+              <option>Assignment Relevance</option>
+              <option>Exam Structure & Evaluation</option>
+              <option>Lab / Practical Session Feedback</option>
+              <option>Online Class Experience</option>
+              <option>Class Environment</option>
+              <option>Library Services Feedback</option>
+              <option>Administrative Support</option>
+              <option>Infrastructure / Facilities</option>
+              <option>Counseling & Mentoring Support</option>
+              <option>Career Guidance Feedback</option>
+              <option>Extracurricular Activities</option>
+              <option>Hostel / Transport Services</option>
+              <option>Cafeteria / Food Quality</option>
+              <option>Sports & Fitness Facilities</option>
+            </select>
+          </div>
+      
+          <!-- Question Types -->
+          <div class="bg-white rounded-2xl p-4 shadow col-span-2">
+            <h3 class="font-semibold text-xl mb-2">3. Feedback Questions</h3>
+            <label>Rate the course (1-5): <input type="number" min="1" max="5" class="input" /></label>
+            <label>Was the assignment relevant? <input type="checkbox" /></label>
+            <label>Select your preferred teaching method:</label>
+            <select class="input">
+              <option>Lecture</option>
+              <option>Interactive</option>
+              <option>Online</option>
+            </select>
+            <label>Describe your experience: <textarea class="input"></textarea></label>
+            <label>Overall Satisfaction:
+              <select class="input">
+                <option>Strongly Agree</option>
+                <option>Agree</option>
+                <option>Neutral</option>
+                <option>Disagree</option>
+                <option>Strongly Disagree</option>
+              </select>
+            </label>
+            <label>Top Complaints: <input placeholder="List top 3" class="input" /></label>
+          </div>
+      
+          <!-- Submission Features -->
+          <div class="bg-white rounded-2xl p-4 shadow">
+            <h3 class="font-semibold text-xl mb-2">4. Submission Features</h3>
+            <input placeholder="Feedback Session (e.g. Mid-term)" class="input" />
+            <input placeholder="Feedback for Specific Teacher" class="input" />
+            <input placeholder="Feedback for Specific Course" class="input" />
+            <label><input type="checkbox" /> Save as Draft</label>
+            <label><input type="checkbox" /> Submit Anonymously</label>
+          </div>
+      
+          <!-- Visualizations -->
+          <div class="bg-white rounded-2xl p-4 shadow col-span-2">
+            <h3 class="font-semibold text-xl mb-2">5. Feedback Visualizations</h3>
+            <canvas id="feedbackBarChart" height="200"></canvas>
+            <canvas id="feedbackPieChart" height="200"></canvas>
+            <canvas id="feedbackLineChart" height="200"></canvas>
+          </div>
+      
+          <!-- Insights & Summary -->
+          <div class="bg-white rounded-2xl p-4 shadow">
+            <h3 class="font-semibold text-xl mb-2">6. Management & Insights</h3>
+            <textarea placeholder="Most Common Complaints / Suggestions" class="input"></textarea>
+            <textarea placeholder="Admin Notes / Actions Taken" class="input"></textarea>
+            <label><input type="checkbox" /> Feedback Addressed</label>
+            <button class="bg-blue-500 text-white rounded-xl p-2 mt-2">Download Feedback Summary PDF</button>
+          </div>
+      
+          <!-- Engagement & Filters -->
+          <div class="bg-white rounded-2xl p-4 shadow">
+            <h3 class="font-semibold text-xl mb-2">7. Engagement & Filters</h3>
+            <input placeholder="Search Feedback by Keyword" class="input" />
+            <select class="input">
+              <option>Filter by Class / Section / Subject</option>
+              <option>Filter by Feedback Category</option>
+            </select>
+            <button class="bg-green-500 text-white rounded-xl p-2 mt-2">Submit Feedback</button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Chart.js Script -->
+      <script>
+      const ctxBar = document.getElementById('feedbackBarChart').getContext('2d');
+      new Chart(ctxBar, {
+        type: 'bar',
+        data: {
+          labels: ['Course Content', 'Teaching', 'Assignment'],
+          datasets: [{
+            label: 'Avg Rating',
+            data: [4.2, 4.5, 4.0],
+            backgroundColor: '#3b82f6'
+          }]
+        }
+      });
+      
+      const ctxPie = document.getElementById('feedbackPieChart').getContext('2d');
+      new Chart(ctxPie, {
+        type: 'pie',
+        data: {
+          labels: ['Positive', 'Neutral', 'Negative'],
+          datasets: [{
+            data: [60, 25, 15],
+            backgroundColor: ['#10b981', '#fbbf24', '#ef4444']
+          }]
+        }
+      });
+      
+      const ctxLine = document.getElementById('feedbackLineChart').getContext('2d');
+      new Chart(ctxLine, {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+          datasets: [{
+            label: 'Satisfaction Trend',
+            data: [3.9, 4.1, 4.3, 4.2],
+            borderColor: '#6366f1',
+            fill: false
+          }]
+        }
+      });
+      </script>
+      
+      <style>
+      .input {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+      }
+      </style>
+
+      </section>
+      <section id="settings" class="dashboard-section hidden">
+        
+
+        <div class="settings-category">
+          <h3>Profile Management</h3>
+          <form id="profile-form">
+            <label for="name">Edit Name:</label>
+            <input type="text" id="name" name="name" />
+      
+            <label for="profile-picture">Upload/Change Profile Picture:</label>
+            <input type="file" id="profile-picture" name="profile-picture" />
+      
+            <label for="email">Update Email Address:</label>
+            <input type="email" id="email" name="email" />
+      
+            <label for="mobile">Change Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" />
+      
+            <label for="address">Update Address:</label>
+            <input type="text" id="address" name="address" />
+      
+            <label for="dob">Update Date of Birth:</label>
+            <input type="date" id="dob" name="dob" />
+      
+            <label for="gender">Gender Selection:</label>
+            <select id="gender" name="gender">
+              <option value="">Select</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="other">Other</option>
+            </select>
+      
+            <label for="stream">Stream / Subject Group:</label>
+            <input type="text" id="stream" name="stream" />
+      
+            <label for="academic-year">Academic Year:</label>
+            <input type="text" id="academic-year" name="academic-year" />
+      
+            <label for="language">Language Preference:</label>
+            <select id="language" name="language">
+              <option value="en">English</option>
+              <option value="hi">Hindi</option>
+              <!-- Add more languages as needed -->
+            </select>
+      
+            <button type="submit">Save Profile</button>
+          </form>
+        </div>
+      
+        <!-- 2. Account Settings -->
+        <div class="settings-category">
+          <h3>Account Settings</h3>
+          <form id="account-settings-form">
+            <label for="password">Change Password:</label>
+            <input type="password" id="password" name="password" />
+      
+            <label>
+              <input type="checkbox" id="2fa" name="2fa" />
+              Enable Two-Factor Authentication
+            </label>
+      
+            <label for="security-question">Set Security Questions:</label>
+            <input type="text" id="security-question" name="security-question" />
+      
+            <p>Last Login Details: <span id="last-login">2025-04-21 10:30 AM</span></p>
+      
+            <label for="linked-accounts">Manage Linked Accounts:</label>
+            <select id="linked-accounts" name="linked-accounts" multiple>
+              <option value="google">Google</option>
+              <option value="facebook">Facebook</option>
+              <!-- Add more options as needed -->
+            </select>
+      
+            <button type="button" id="download-data">Download Account Data</button>
+            <button type="button" id="delete-account">Delete Account</button>
+      
+            <label>
+              <input type="checkbox" id="privacy-settings" name="privacy-settings" />
+              Privacy Settings Toggle
+            </label>
+      
+            <p>Activity Log: <a href="#" id="view-activity-log">View</a></p>
+            <button type="button" id="logout-all">Logout from All Devices</button>
+          </form>
+        </div>
+      
+        <!-- 3. Notification Settings -->
+        <div class="settings-category">
+          <h3>Notification Settings</h3>
+          <form id="notification-settings-form">
+            <label>
+              <input type="checkbox" id="email-notifications" name="email-notifications" />
+              Enable Email Notifications
+            </label>
+      
+            <label>
+              <input type="checkbox" id="sms-notifications" name="sms-notifications" />
+              Enable SMS Notifications
+            </label>
+      
+            <label for="push-notifications">Push Notification Settings:</label>
+            <select id="push-notifications" name="push-notifications">
+              <option value="all">All</option>
+              <option value="important">Important Only</option>
+              <option value="none">None</option>
+            </select>
+      
+            <label for="notification-preferences">Set Notification Preferences:</label>
+            <select id="notification-preferences" name="notification-preferences" multiple>
+              <option value="reminders">Reminders</option>
+              <option value="alerts">Alerts</option>
+              <option value="announcements">Announcements</option>
+            </select>
+      
+            <label for="notification-sound">Set Notification Sound:</label>
+            <input type="text" id="notification-sound" name="notification-sound" />
+      
+            <label for="notification-frequency">Notification Frequency:</label>
+            <select id="notification-frequency" name="notification-frequency">
+              <option value="immediate">Immediate</option>
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+            </select>
+      
+            <label for="dnd-timeframe">Do Not Disturb Timeframe:</label>
+            <input type="text" id="dnd-timeframe" name="dnd-timeframe" placeholder="e.g., 10:00 PM - 7:00 AM" />
+      
+            <button type="submit">Save Notification Settings</button>
+          </form>
+        </div>
+      
+        <!-- 4. Appearance & Accessibility -->
+        <div class="settings-category">
+          <h3>Appearance & Accessibility</h3>
+          <form id="appearance-settings-form">
+            <label for="theme">Theme Selection:</label>
+            <select id="theme" name="theme">
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+              <option value="auto">Auto</option>
+            </select>
+      
+            <label for="font-size">Font Size Adjustment:</label>
+            <input type="range" id="font-size" name="font-size" min="12" max="24" />
+      
+            <label>
+              <input type="checkbox" id="high-contrast" name="high-contrast" />
+              High Contrast Mode
+            </label>
+      
+            <label>
+              <input type="checkbox" id="language-translation" name="language-translation" />
+              Language Translation Support
+            </label>
+      
+            <label>
+              <input type="checkbox" id="accessibility-tools" name="accessibility-tools" />
+              Accessibility Tools Toggle
+            </label>
+      
+            <label for="dashboard-layout">Custom Dashboard Layout:</label>
+            <select id="dashboard
+
+ 
+        </section>
+
+      <section id="helpdesk" class="dashboard-section hidden">
+      </section>
     </main>
   </div>
 
