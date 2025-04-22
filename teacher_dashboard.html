@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="teacher_dashboard.css" />
+  <script defer src="teacher_dashboard.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>Teacher Dashboard</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active" onclick="showSection('overview')">1. Overview</a></li>
+        <li><a href="#" onclick="showSection('attendance')">2. Attendance</a></li>
+        <li><a href="#" onclick="showSection('assignments')">3. Assignments</a></li>
+        <li><a href="#" onclick="showSection('schedule')">4. Schedule</a></li>
+        <li><a href="#" onclick="showSection('messages')">5. Messages</a></li>
+        <li><a href="#" onclick="showSection('announcements')">6. Announcements</a></li>
+        <li><a href="#" onclick="showSection('gradebook')">7. Gradebook</a></li>
+        <li><a href="#" onclick="showSection('profile')">8. Profile</a></li>
+        <li><a href="#" onclick="showSection('settings')">9. Settings</a></li>
+        <li><a href="#" onclick="showSection('resources')">10. Resources</a></li>
+        <li><a href="#" onclick="showSection('calendar')">11. Calendar</a></li>
+        <li><a href="#" onclick="showSection('feedback')">12. Feedback</a></li>
+        <li><a href="#" onclick="showSection('reports')">13. Reports</a></li>
+        <li><a href="#" onclick="showSection('logout')">14. Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <!-- 14 dashboard sections -->
+     
+    <section id="overview" class="dashboard-section"><h2>Overview</h2>
+        <div class="card-grid">
+            <div class="card">Total Students<br><span class="number">120</span></div>
+            <div class="card">Classes Today<br><span class="number">5</span></div>
+            <div class="card">Pending Assignments<br><span class="number">12</span></div>
+            <div class="card">Messages<br><span class="number">8</span></div>
+          </div>
+        
+          <!-- Quick Stats -->
+          <div class="quick-stats">
+            <div class="stat-card">Average Attendance<br><span>87%</span></div>
+            <div class="stat-card">Assignment Completion<br><span>74%</span></div>
+            <div class="stat-card">Class Engagement<br><span>92%</span></div>
+            <div class="stat-card">Quiz Scores<br><span>81%</span></div>
+          </div>
+        
+          <!-- Chart Placeholders -->
+          <div class="charts-container">
+            <div class="chart-box">📊 Attendance Chart (Placeholder)</div>
+            <div class="chart-box">📈 Assignment Trends (Placeholder)</div>
+            <div class="chart-box">📉 Grade Distribution (Placeholder)</div>
+            <div class="chart-box">📊 Activity Timeline (Placeholder)</div>
+          </div>
+        
+          <!-- Notifications -->
+          <div class="notifications">
+            <h3>Notifications</h3>
+            <ul>
+              <li>📢 New student registered in Math class</li>
+              <li>📝 Assignment "Chapter 4 Summary" due tomorrow</li>
+              <li>📬 Message received from Parent</li>
+              <li>📆 Meeting scheduled with Principal on Friday</li>
+            </ul>
+          </div>
+        
+          <!-- Recent Activity -->
+          <div class="recent-activity">
+            <h3>Recent Activity</h3>
+            <ul>
+              <li>✔️ Grade entered for Science Quiz</li>
+              <li>➕ Student added to English class</li>
+              <li>📤 Assignment posted in History</li>
+              <li>📨 Email sent to parents</li>
+            </ul>
+          </div>
+        
+          <!-- Quick Actions -->
+          <div class="quick-actions">
+            <h3>Quick Actions</h3>
+            <button>📥 Upload Material</button>
+            <button>📊 Generate Report</button>
+            <button>🗓 View Schedule</button>
+            <button>✉️ Send Announcement</button>
+          </div>
+        
+          <!-- Weekly Overview Table -->
+          <div class="table-section">
+            <h3>This Week’s Class Overview</h3>
+            <table>
+              <tr><th>Day</th><th>Subjects</th><th>Attendance</th><th>Activities</th></tr>
+              <tr><td>Mon</td><td>Math, English</td><td>92%</td><td>Lecture, Quiz</td></tr>
+              <tr><td>Tue</td><td>Science, History</td><td>89%</td><td>Assignment, Group Work</td></tr>
+              <tr><td>Wed</td><td>Math, Biology</td><td>94%</td><td>Lecture</td></tr>
+              <tr><td>Thu</td><td>Chemistry, Geography</td><td>87%</td><td>Lab, Project</td></tr>
+              <tr><td>Fri</td><td>Math, English</td><td>90%</td><td>Lecture, Quiz</td></tr>
+            </table>
+          </div>
+        
+        </section>
+    <section id="attendance" class="dashboard-section"><h2>Attendance</h2><p>Track attendance records.</p></section>
+    <section id="assignments" class="dashboard-section"><h2>Assignments</h2><p>Manage student assignments.</p></section>
+    <section id="schedule" class="dashboard-section"><h2>Schedule</h2><p>View your teaching schedule.</p></section>
+    <section id="messages" class="dashboard-section"><h2>Messages</h2><p>Check messages from students.</p></section>
+    <section id="announcements" class="dashboard-section"><h2>Announcements</h2><p>Post and view announcements.</p></section>
+    <section id="gradebook" class="dashboard-section"><h2>Gradebook</h2><p>Record and manage grades.</p></section>
+    <section id="profile" class="dashboard-section"><h2>Profile</h2><p>Update your profile information.</p></section>
+    <section id="settings" class="dashboard-section"><h2>Settings</h2><p>Customize dashboard settings.</p></section>
+    <section id="resources" class="dashboard-section"><h2>Resources</h2><p>Access teaching materials and resources.</p></section>
+    <section id="calendar" class="dashboard-section"><h2>Calendar</h2><p>Manage your academic calendar.</p></section>
+    <section id="feedback" class="dashboard-section"><h2>Feedback</h2><p>View and give feedback.</p></section>
+    <section id="reports" class="dashboard-section"><h2>Reports</h2><p>Generate and view student reports.</p></section>
+    <section id="logout" class="dashboard-section"><h2>Logout</h2><p>You have successfully logged out.</p></section>
+  </main>
+</body>
+</html>
