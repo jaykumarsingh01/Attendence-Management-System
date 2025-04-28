@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ page: 'dashboard' }" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard - Student Attendance System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-blue-800 text-white min-h-screen p-6 space-y-4">
+        <h1 class="text-2xl font-bold mb-6">Parent Portal</h1>
+        <nav class="space-y-4">
+            <a @click="page='dashboard'" class="block p-3 hover:bg-blue-700 rounded cursor-pointer">🏠 Dashboard</a>
+            <a @click="page='attendance'" class="block p-3 hover:bg-blue-700 rounded cursor-pointer">📅 Attendance</a>
+            <a @click="page='notifications'" class="block p-3 hover:bg-blue-700 rounded cursor-pointer">🔔 Notifications</a>
+            <a @click="page='progress'" class="block p-3 hover:bg-blue-700 rounded cursor-pointer">📈 Progress</a>
+            <a @click="page='calendar'" class="block p-3 hover:bg-blue-700 rounded cursor-pointer">🗓️ Calendar</a>
+            <a @click="page='contact'" class="block p-3 hover:bg-blue-700 rounded cursor-pointer">💬 Contact Teacher</a>
+            <a @click="page='profile'" class="block p-3 hover:bg-blue-700 rounded cursor-pointer">⚙️ Profile Settings</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-10 overflow-y-auto">
+        
+        <!-- Dashboard -->
+        <section x-show="page === 'dashboard'">
+            <h2 class="text-3xl font-bold mb-6">Dashboard Overview</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <h3 class="text-lg font-semibold">Monthly Attendance</h3>
+                    <p class="text-2xl font-bold text-green-600 mt-2">95%</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <h3 class="text-lg font-semibold">Absent Days</h3>
+                    <p class="text-2xl font-bold text-red-600 mt-2">2</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <h3 class="text-lg font-semibold">Next Meeting</h3>
+                    <p class="text-lg mt-2">10th May, 2025</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-bold mb-4">Attendance Graph</h3>
+                <canvas id="attendanceChart" height="100"></canvas>
+            </div>
+        </section>
+
+        <!-- Attendance -->
+        <section x-show="page === 'attendance'">
+            <h2 class="text-3xl font-bold mb-6">Attendance Record</h2>
+
+            <div class="overflow-x-auto bg-white p-6 rounded-lg shadow mb-10">
+                <table class="min-w-full table-auto">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="px-4 py-2">Date</th>
+                            <th class="px-4 py-2">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr>
+                            <td class="border px-4 py-2">2025-04-01</td>
+                            <td class="border px-4 py-2 text-green-600">Present</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">2025-04-02</td>
+                            <td class="border px-4 py-2 text-red-600">Absent</td>
+                        </tr>
+                        <!-- more rows -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-bold mb-4">Attendance Summary</h3>
+                <canvas id="attendancePieChart" height="100"></canvas>
+            </div>
+        </section>
+
+        <!-- Notifications -->
+        <section x-show="page === 'notifications'">
+            <h2 class="text-3xl font-bold mb-6">Notifications</h2>
+
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded shadow flex items-center">
+                    <span class="text-blue-600 text-2xl mr-4">🔔</span>
+                    <p>Sports day event on 5th May 2025</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow flex items-center">
+                    <span class="text-red-600 text-2xl mr-4">⚠️</span>
+                    <p>Absent on 3rd May 2025</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress -->
+        <section x-show="page === 'progress'">
+            <h2 class="text-3xl font-bold mb-6">Progress Overview</h2>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-bold mb-4">Academic Performance</h3>
+                <canvas id="progressChart" height="100"></canvas>
+            </div>
+        </section>
+
+        <!-- Calendar -->
+        <section x-show="page === 'calendar'">
+            <h2 class="text-3xl font-bold mb-6">School Calendar</h2>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-lg font-semibold mb-4">Upcoming Events</h3>
+                <ul class="space-y-3">
+                    <li>🏆 Sports Day - 5th May</li>
+                    <li>📚 Annual Exam - 20th May</li>
+                    <li>🎉 Summer Vacation - 10th June</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Teacher -->
+        <section x-show="page === 'contact'">
+            <h2 class="text-3xl font-bold mb-6">Contact Teacher</h2>
+
+            <form class="bg-white p-6 rounded-lg shadow space-y-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Subject</label>
+                    <input type="text" class="w-full p-2 border rounded" placeholder="Subject of your message">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Message</label>
+                    <textarea class="w-full p-2 border rounded" rows="5" placeholder="Write your message..."></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded">
+                    Send Message
+                </button>
+            </form>
+        </section>
+
+        <!-- Profile Settings -->
+        <section x-show="page === 'profile'">
+            <h2 class="text-3xl font-bold mb-6">Profile Settings</h2>
+
+            <form class="bg-white p-6 rounded-lg shadow space-y-6">
+                <div class="flex flex-col">
+                    <label class="mb-2 text-sm font-semibold">Full Name</label>
+                    <input type="text" class="border rounded p-2" placeholder="John Doe">
+                </div>
+                <div class="flex flex-col">
+                    <label class="mb-2 text-sm font-semibold">Email Address</label>
+                    <input type="email" class="border rounded p-2" placeholder="john@example.com">
+                </div>
+                <div class="flex flex-col">
+                    <label class="mb-2 text-sm font-semibold">Password</label>
+                    <input type="password" class="border rounded p-2" placeholder="********">
+                </div>
+                <button type="submit" class="bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded">
+                    Update Profile
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Charts Script -->
+    <script>
+        const attendanceCtx = document.getElementById('attendanceChart').getContext('2d');
+        new Chart(attendanceCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                datasets: [{
+                    label: 'Attendance %',
+                    data: [95, 90, 93, 97],
+                    backgroundColor: 'rgba(59, 130, 246, 0.7)'
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        const pieCtx = document.getElementById('attendancePieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Present', 'Absent'],
+                datasets: [{
+                    label: 'Attendance',
+                    data: [28, 2],
+                    backgroundColor: ['#34D399', '#F87171']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        const progressCtx = document.getElementById('progressChart').getContext('2d');
+        new Chart(progressCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [{
+                    label: 'Marks (%)',
+                    data: [85, 88, 90, 87, 92],
+                    backgroundColor: 'rgba(16, 185, 129, 0.5)',
+                    borderColor: 'rgba(16, 185, 129, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+
+</body>
+</html>
